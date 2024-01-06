@@ -8,12 +8,12 @@
 
 <svelte:head>
 	<meta />
-	{#if ($theme === 'light')}
+	{#if $theme === 'light'}
 		<link rel="stylesheet" href="/styles/light.theme.css" />
 	{:else if $theme === 'dark'}
 		<link rel="stylesheet" href="/styles/dark.theme.css" />
 	{:else}
-		<link rel="stylesheet" href="/styles/dark.theme.css" />
+		<link rel="stylesheet" href="/styles/system.theme.css" />
 	{/if}
 </svelte:head>
 <heading>

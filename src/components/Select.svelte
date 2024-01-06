@@ -2,7 +2,7 @@
 	export let value = '';
 	export let selections: string[];
 	export let placeholder: string;
-  export let checkAgainstValue: string
+	export let checkAgainstValue: string;
 	export let name: string;
 </script>
 
@@ -23,10 +23,10 @@
 		/*  other styles for aesthetics */
 		width: 100%;
 		font-size: 1.15rem;
-		background-color: #470f0f;
-		border: 1px solid #000000;
+		background-color: var(--primary);
+		border: 1px solid var(--primary-border);
 		border-radius: 0.25rem;
-		color: #cf328b;
+		color: (--font-color);
 		cursor: pointer;
 		font-size: 1.5em;
 	}
@@ -38,7 +38,7 @@
 		min-height: 40px;
 		margin: 0px;
 		text-align: center;
-		color: #c235af;
+		color: var(--font-color);
 		margin-right: 20px;
 		margin-left: 20px;
 		border-radius: 20px;
@@ -46,7 +46,7 @@
 	}
 
 	.custom-select:hover :active {
-		background-color: #612a5a;
+		background-color: var(--primary-hover);
 	}
 
 	.custom-select::before,
@@ -61,14 +61,14 @@
 	.custom-select::before {
 		border-left: var(--size) solid transparent;
 		border-right: var(--size) solid transparent;
-		border-bottom: var(--size) solid black;
+		border-bottom: var(--size) solid var(--darkest);
 		top: 40%;
 	}
 
 	.custom-select::after {
 		border-left: var(--size) solid transparent;
 		border-right: var(--size) solid transparent;
-		border-top: var(--size) solid black;
+		border-top: var(--size) solid var(--darkest);
 		top: 55%;
 	}
 </style>

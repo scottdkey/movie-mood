@@ -3,13 +3,4 @@
 </p>
 
 <style>
-	p {
-		color: white;
-		text-align: top;
-		vertical-align: top;
-	}
-
-	a {
-		color: darkgray;
-	}
 </style>

@@ -16,8 +16,6 @@
 
 <style>
 	.reset-mood {
-		background-color: #612a5a8b;
-		color: #cf328b;
 		width: 7rem;
 		height: 3rem;
 		margin: 0px;
@@ -29,12 +27,12 @@
 		margin-top: 50px;
 		border: none;
 		font-size: 1.2em;
+		background-color: var(--secondary);
 	}
 	.reset-mood:hover {
-		background-color: #71178388;
+		background-color: var(--secondary-hover);
 	}
 	.reset-mood:disabled {
-		background-color: #84848447;
-		color: #494949;
+		background-color: var(--secondary-disabled);
 	}
 </style>

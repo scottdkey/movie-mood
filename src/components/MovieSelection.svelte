@@ -14,7 +14,7 @@
 		margin-top: 40px;
 		text-align: center;
 		vertical-align: center;
-		color: #c235af;
+		color: var(--font-color);
 		font-size: 20px;
 	}
 </style>
