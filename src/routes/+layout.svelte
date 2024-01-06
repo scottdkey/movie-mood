@@ -4,6 +4,22 @@
 	import '../styles/global.css';
 	import { theme } from '$lib/stores/theme';
 	import Theme from '../components/Theme.svelte';
+	import { onMount } from 'svelte';
+	import type { LayoutData } from './$types';
+
+	export let data: LayoutData;
+
+	onMount(() => {
+		const themeVal = data.theme;
+
+		if (themeVal === undefined) {
+			const systemDarkMode =
+				window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+			theme.set(systemDarkMode ? 'dark' : 'light');
+		} else {
+			theme.set(data.theme);
+		}
+	});
 </script>
 
 <svelte:head>

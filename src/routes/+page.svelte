@@ -5,23 +5,6 @@
 	import { moods } from '../staticData/selections';
 	import { CurrentMood } from '../lib/stores/currentMood.store';
 	import { DesiredMood } from '../lib/stores/desiredMood.store';
-	import type { PageData } from './$types';
-	import { onMount } from 'svelte';
-	import { theme } from '../lib/stores/theme';
-
-	export let data: PageData;
-
-	onMount(() => {
-		const themeVal = data.theme;
-
-		if (themeVal === undefined) {
-			const systemDarkMode =
-				window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-			theme.set(systemDarkMode ? 'dark' : 'light');
-		} else {
-			theme.set(data.theme);
-		}
-	});
 </script>
 
 <body class="primary">

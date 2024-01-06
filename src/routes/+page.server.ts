@@ -1,11 +1,5 @@
 import { redirect } from '@sveltejs/kit';
-import type { Actions, PageServerLoad } from './$types';
-
-export const load: PageServerLoad = async (event) => {
-	return {
-		theme: event.locals.theme || 'system'
-	};
-};
+import type { Actions } from './$types';
 
 export const actions: Actions = {
 	setTheme: async ({ url, cookies, request }) => {
