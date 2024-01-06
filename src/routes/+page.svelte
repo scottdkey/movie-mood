@@ -1,25 +1,19 @@
 <script lang="ts">
-	import Acknowledgements from '../components/Acknowledgements.svelte';
-	import Drawer from '../components/Drawer.svelte';
 	import MovieSelection from '../components/MovieSelection.svelte';
 	import ResetMoodButton from '../components/ResetMoodButton.svelte';
 	import Select from '../components/Select.svelte';
 	import { moods } from '../staticData/selections';
-	import { CurrentMood } from '../stores/currentMood.store';
-	import { DesiredMood } from '../stores/desiredMood.store';
+	import { CurrentMood } from '../lib/stores/currentMood.store';
+	import { DesiredMood } from '../lib/stores/desiredMood.store';
 </script>
 
 <body class="primary">
-	<Drawer>
-		<Acknowledgements />
-	</Drawer>
-	<h1>Movie Mood</h1>
 	<div class="selectors">
 		<Select
 			name="current-mood"
 			selections={moods}
 			placeholder="Current Mood"
-			checkAgainstValue={$DesiredMood}
+			bind:checkAgainstValue={$DesiredMood}
 			bind:value={$CurrentMood}
 		/>
 		<Select
@@ -40,17 +34,7 @@
 		font-family: 'system-ui, sans-serif';
 		line-height: '1.8';
 	}
-	h1 {
-		background-color: #612a5a;
-		color: #cf328b;
-		border-radius: 0px 0px 20px 20px;
-		margin: 0px;
-		text-align: center;
-		vertical-align: middle;
-		padding-top: 20px;
-		max-height: 100px;
-		padding-bottom: 40px;
-	}
+
 	.selectors {
 		display: flex;
 		width: 100%;

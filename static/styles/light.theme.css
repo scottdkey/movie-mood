@@ -1,0 +1,16 @@
+:root {
+	--color-lightest: hsl(0deg, 0%, 100%);
+	--color-lighter: hsl(0deg, 0%, 80%);
+	--color-light: hsl(0deg, 0%, 60%);
+	--color-strong: hsl(0deg, 0%, 40%);
+	--color-stronger: hsl(0deg, 0%, 20%);
+	--color-strongest: hsl(0deg, 0%, 0%);
+	--background: rgb(197, 197, 197);
+	--primary: rgb(47, 150, 168);
+	--primary-hover: rgba(39, 118, 132);
+	--primary-active: rgb(66, 129, 128);
+	--primary-box-border: rgba(202, 218, 220, 0.621);
+	--secondary: rgb(51, 51, 133);
+	--secondary-hover: blue;
+	--font-color: rgb(0, 0, 0);
+}

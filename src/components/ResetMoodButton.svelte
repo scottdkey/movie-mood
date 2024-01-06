@@ -1,6 +1,6 @@
 <script lang="ts">
-	import { CurrentMood } from '../stores/currentMood.store';
-	import { DesiredMood } from '../stores/desiredMood.store';
+	import { CurrentMood } from '../lib/stores/currentMood.store';
+	import { DesiredMood } from '../lib/stores/desiredMood.store';
 </script>
 
 <button

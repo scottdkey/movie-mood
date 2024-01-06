@@ -1,0 +1,16 @@
+button {
+	background-color: var(--primary);
+	animation: normal;
+	border-radius: 10px;
+	border: 1px solid var(--primary-box-border);
+	width: 100px;
+	height: 40px;
+	transition: ease-in-out 0.2s;
+	color: var(--font-color);
+}
+button:hover {
+	background-color: var(--primary-hover);
+}
+button:active {
+	background-color: var(--primary);
+}
