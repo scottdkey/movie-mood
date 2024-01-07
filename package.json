@@ -38,5 +38,8 @@
     "vitest": "^1.0.0",
     "wrangler": "^3.22.3"
   },
-  "type": "module"
+  "type": "module",
+  "dependencies": {
+    "zod": "^3.22.4"
+  }
 }

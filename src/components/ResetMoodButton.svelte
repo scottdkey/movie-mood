@@ -27,12 +27,12 @@
 		margin-top: 50px;
 		border: none;
 		font-size: 1.2em;
-		background-color: var(--secondary);
+		background: var(--secondary);
 	}
 	.reset-mood:hover {
-		background-color: var(--secondary-hover);
+		background: var(--secondary-hover);
 	}
 	.reset-mood:disabled {
-		background-color: var(--secondary-disabled);
+		background: var(--secondary-disabled);
 	}
 </style>

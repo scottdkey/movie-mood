@@ -1,11 +1,12 @@
 <script lang="ts">
 	import Acknowledgements from '../components/Acknowledgements.svelte';
 	import Drawer from '../components/Drawer.svelte';
-	import '../styles/global.css';
 	import { theme } from '$lib/stores/theme';
 	import Theme from '../components/Theme.svelte';
 	import { onMount } from 'svelte';
 	import type { LayoutData } from './$types';
+	import '../styles/global.css';
+	import ThemeToggle from '../components/ThemeToggle.svelte';
 
 	export let data: LayoutData;
 
@@ -24,6 +25,7 @@
 
 <svelte:head>
 	<meta />
+
 	{#if $theme === 'light'}
 		<link rel="stylesheet" href="/styles/light.theme.css" />
 	{:else if $theme === 'dark'}
@@ -34,7 +36,9 @@
 </svelte:head>
 <heading>
 	<h1>Movie Mood</h1>
-	<Theme />
+	<form method="POST" action="?/setTheme" >
+		<ThemeToggle />
+	</form>
 </heading>
 
 <body>

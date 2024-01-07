@@ -53,15 +53,4 @@
 		}
 	}
 
-	/*=============
-Aesthetics 
-=========================*/
-
-	* {
-		box-sizing: border-box;
-		margin: 0px;
-	}
-	body {
-		background-color: #18041a;
-	}
 </style>

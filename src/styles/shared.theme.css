@@ -4,6 +4,13 @@
 	--font-mono: 'Fira Mono', monospace;
 	color: var(--font-color);
 	font-family: var(--font-body);
+	--lightest: 0.2;
+	--lighter: 0.3;
+	--light: 0.4;
+	--standard: 0.9;
+	--strong: 0.6;
+	--stronger: 0.7;
+	--strongest: 0.8;
 }
 
 body {
