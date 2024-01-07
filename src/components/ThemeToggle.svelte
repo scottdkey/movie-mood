@@ -50,9 +50,8 @@
 
 	.wrapper {
 		position: absolute;
-		right: 2px;
-		top: 25px;
-		/* transform: translate(-50%, -50%); */
+		bottom: -1em;
+		right: -3em;
 	}
 
 	#hide-checkbox {
@@ -71,19 +70,20 @@
 		border-radius: 50px;
 		transition: 500ms;
 		overflow: hidden;
+		scale: 0.3;
 	}
 
 	.toggle-button {
 		position: absolute;
 		display: inline-block;
-		top: 0.4rem;
-		left: 0.5rem;
-		width: 5.5rem;
-		height: 5.5rem;
+		top: 0.4em;
+		left: 0.5em;
+		width: 5.5em;
+		height: 5.5em;
 		border-radius: 50%;
 		background: #faeaf1;
 		overflow: hidden;
-		box-shadow: 0 0 3rem 0.5rem rgba(255, 255, 255);
+		box-shadow: 0 0 3em 0.5em rgba(255, 255, 255);
 		transition: all 500ms ease-out;
 	}
 
@@ -97,52 +97,52 @@
 
 	.crater-1 {
 		background: #fffff9;
-		width: 5.5rem;
-		height: 5.5rem;
-		left: 0rem;
-		bottom: 0rem;
+		width: 5.5em;
+		height: 5.5em;
+		left: 0em;
+		bottom: 0em;
 	}
 
 	.crater-2 {
 		width: 1em;
 		height: 1em;
-		top: -0.1rem;
-		left: 3rem;
+		top: -0.1em;
+		left: 3em;
 	}
 
 	.crater-3 {
 		width: 1em;
 		height: 1em;
-		top: 1.5rem;
-		right: -0.2rem;
+		top: 1.5em;
+		right: -0.2em;
 	}
 
 	.crater-4 {
 		width: 1em;
 		height: 1em;
-		top: 1.3rem;
-		left: 2rem;
+		top: 1.3em;
+		left: 2em;
 	}
 
 	.crater-5 {
 		width: 0.7em;
 		height: 0.7em;
-		top: 2.5rem;
-		left: 3rem;
+		top: 2.5em;
+		left: 3em;
 	}
 
 	.crater-6 {
 		width: 0.6em;
 		height: 0.6em;
-		top: 3.2rem;
-		left: 1.3rem;
+		top: 3.2em;
+		left: 1.3em;
 	}
 
 	.crater-7 {
 		width: 0.6em;
 		height: 0.6em;
-		bottom: -0.1rem;
-		left: 2.4rem;
+		bottom: -0.1em;
+		left: 2.4em;
 	}
 
 	.star {
@@ -156,36 +156,36 @@
 	.star-1 {
 		width: 0.5em;
 		height: 0.5em;
-		right: 5rem;
-		bottom: 3rem;
+		right: 5em;
+		bottom: 3em;
 	}
 
 	.star-2 {
 		width: 0.5em;
 		height: 0.5em;
-		right: 4.1rem;
-		top: 0.7rem;
+		right: 4.1em;
+		top: 0.7em;
 	}
 
 	.star-3 {
 		width: 0.3em;
 		height: 0.3em;
-		right: 3.7rem;
-		bottom: 1rem;
+		right: 3.7em;
+		bottom: 1em;
 	}
 
 	.star-4 {
 		width: 0.2em;
 		height: 0.2em;
-		right: 2.5rem;
-		bottom: 3.1rem;
+		right: 2.5em;
+		bottom: 3.1em;
 	}
 
 	.star-5 {
 		width: 0.2em;
 		height: 0.2em;
-		right: 1rem;
-		bottom: 2rem;
+		right: 1em;
+		bottom: 2em;
 	}
 
 	.star-6,
@@ -209,13 +209,13 @@
 	}
 
 	.star-7 {
-		right: 3.2rem;
-		bottom: 4rem;
+		right: 3.2em;
+		bottom: 4em;
 	}
 
 	.star-8 {
-		right: 5rem;
-		top: 1rem;
+		right: 5em;
+		top: 1em;
 		animation-delay: -4s;
 	}
 
@@ -259,79 +259,79 @@
 	}
 
 	#hide-checkbox:checked + .toggle .star-1 {
-		width: 40px;
-		height: 10px;
+		width: 2.4em;
+		height: 0.62em;
 		border-radius: 10px;
 		background: #fff;
-		left: 20px;
-		top: 25px;
+		left: 1.25em;
+		top: 1.6em;
 		box-shadow: none;
 	}
 
 	#hide-checkbox:checked + .toggle .star-2 {
-		width: 12px;
-		height: 12px;
+		width: 0.9em;
+		height: 0.8em;
 		background: #fff;
-		left: 26px;
-		top: 23px;
+		left: 1.62em;
+		top: 1.42em;
 		box-shadow: -1px 0 2px 0 rgba(0, 0, 0, 0.1);
 	}
 
 	#hide-checkbox:checked + .toggle .star-3 {
-		width: 16px;
-		height: 16px;
+		width: 1em;
+		height: 1em;
 		background: #fff;
-		left: 35px;
-		top: 19px;
+		left: 2.2em;
+		top: 1.2em;
 		box-shadow: -1px 0 2px 0 rgba(0, 0, 0, 0.1);
 	}
 
 	#hide-checkbox:checked + .toggle .star-4 {
-		width: 14px;
-		height: 14px;
+		width: 0.92em;
+		height: 0.92em;
 		background: #fff;
-		left: 46px;
-		top: 21px;
+		left: 2.8em;
+		top: 1.3em;
 		box-shadow: -1px 0 2px 0 rgba(0, 0, 0, 0.1);
 	}
 
 	#hide-checkbox:checked + .toggle .star-5 {
-		width: 60px;
-		height: 15px;
-		border-radius: 15px;
+		width: 3.8em;
+		height: 0.9em;
+		border-radius: 1em;
 		background: #fff;
-		left: 30px;
-		bottom: 20px;
+		left: 1.8em;
+		bottom: 1.25em;
 		box-shadow: none;
 	}
 
 	#hide-checkbox:checked + .toggle .star-6 {
-		width: 18px;
-		height: 18px;
+		width: 1.2em;
+		height: 1.2em;
 		background: #fff;
 		border-radius: 50%;
-		left: 38px;
-		bottom: 20px;
+		left: 2.4em;
+		bottom: 1.3em;
 		box-shadow: -1px 0 2px 0 rgba(0, 0, 0, 0.1);
 	}
 
 	#hide-checkbox:checked + .toggle .star-7 {
-		width: 24px;
-		height: 24px;
+		width: 1.5em;
+		height: 1.5em;
 		background: #fff;
 		border-radius: 50%;
-		left: 52px;
-		bottom: 20px;
+		left: 3.3em;
+		bottom: 1.25em;
 		box-shadow: -1px 0 2px 0 rgba(0, 0, 0, 0.1);
 	}
 
 	#hide-checkbox:checked + .toggle .star-8 {
-		width: 21px;
-		height: 21px;
+		width: 1.3em;
+		height: 1.3em;
 		background: #fff;
 		border-radius: 50%;
-		left: 70px;
-		top: 59px;
+		left: 4.4em;
+		top: 3.7em;
 		box-shadow: -1px 0 2px 0 rgba(0, 0, 0, 0.1);
 	}
 
