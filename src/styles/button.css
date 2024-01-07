@@ -3,9 +3,8 @@ button {
 	animation: normal;
 	border-radius: 10px;
 	border: 1px solid var(--primary-box-border);
-	width: 100px;
-	height: 40px;
-	transition: ease-in-out 0.1s;
+	width: fit-content;
+	height: fit-content;
 	color: var(--font-color);
 }
 button:hover {

@@ -1,12 +1,10 @@
 <script lang="ts">
-	import Acknowledgements from '../components/Acknowledgements.svelte';
-	import Drawer from '../components/Drawer.svelte';
 	import { theme } from '$lib/stores/theme';
-	import Theme from '../components/Theme.svelte';
 	import { onMount } from 'svelte';
-	import type { LayoutData } from './$types';
-	import '../styles/global.css';
+	import Acknowledgements from '../components/Acknowledgements.svelte';
 	import ThemeToggle from '../components/ThemeToggle.svelte';
+	import '../styles/global.css';
+	import type { LayoutData } from './$types';
 
 	export let data: LayoutData;
 
@@ -36,9 +34,7 @@
 </svelte:head>
 <heading>
 	<h1>Movie Mood</h1>
-	<form method="POST" action="?/setTheme" >
-		<ThemeToggle />
-	</form>
+	<form method="POST" action="?/setTheme"></form>
 </heading>
 
 <body>
@@ -46,9 +42,8 @@
 </body>
 
 <footer>
-	<Drawer>
-		<Acknowledgements />
-	</Drawer>
+	<Acknowledgements />
+	<ThemeToggle />
 </footer>
 
 <style>
