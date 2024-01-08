@@ -2,13 +2,13 @@
 	export let position: 'top' | 'bottom' | 'left' | 'right' = 'left';
 	export let open = false;
 
-	const toggleOpen = () => {
+	export const toggleOpen = () => {
 		open = !open;
 	};
 </script>
 
-
-<div class="{position} drawer {open ? 'open' : 'closed'} ">
+<div class="front drawer {position}-{open ? 'open' : 'closed'}">
+	<input type="checkbox" class="controller" checked={open} />
 	<div class="drawer-body">
 		<button class="close-button" on:click={toggleOpen}>X</button>
 		<slot />
@@ -16,34 +16,49 @@
 </div>
 
 <style>
-	@media (max-width: 500px) {
-		/* button {
-			width: 65vw;
-		} */
-	}
 	.drawer {
 		position: absolute;
-		transition: ease-in-out 0.5s;
-		z-index: 10;
-		overflow: hidden;
+		background-color: var(--drawer-background);
+		display: flex;
+		flex-direction: column;
 		padding: 0px;
 		margin: 0px;
 		height: fit-content;
 		width: fit-content;
-		background-color: black;
+		-webkit-box-shadow: -1px -10px 13px -5px rgba(0, 0, 0, 0.75);
+		-moz-box-shadow: -1px -10px 13px -5px rgba(0, 0, 0, 0.75);
+		box-shadow: -1px -10px 13px -5px rgba(0, 0, 0, 0.75);
+	}
+	.controller {
+		visibility: hidden;
+		background-color: none;
 	}
 
-	.closed {
-		width: 0em;
-		height: 0em;
-	}
-
-	.bottom {
+	.bottom-open {
 		bottom: 0px;
-	}
-	.drawer-body {
+		transition: ease-in-out 0.5s;
+		height: 60vh;
+		width: 100%;
 		height: fit-content;
-		width: fit-content;
-		overflow: hidden;
+		transform: translateY(50%);
+	}
+
+	.bottom-closed {
+		transform: translateY(230%);
+	}
+
+	.drawer-body {
+		display: flex;
+		flex-direction: column;
+		height: 100%;
+		width: 100%;
+	}
+
+	.close-button {
+		width: 2em;
+		height: 2em;
+		align-self: flex-end;
+		margin-right: 10px;
+		margin-top: 10px;
 	}
 </style>

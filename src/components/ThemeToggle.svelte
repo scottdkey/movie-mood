@@ -11,7 +11,6 @@
 			}
 		});
 		const data = response.json();
-		console.log(data);
 	};
 </script>
 
@@ -50,8 +49,8 @@
 
 	.wrapper {
 		position: absolute;
-		bottom: -1em;
-		right: -3em;
+		right: -60px;
+		bottom: -30px;
 	}
 
 	#hide-checkbox {
@@ -352,15 +351,4 @@
 			opacity: 0%;
 		}
 	}
-
-	/* p {
-		text-align: center;
-		letter-spacing: 15px;
-		background: #34495e;
-		color: #fff;
-	}
-
-	p.morning {
-		background: #e67e22;
-	} */
 </style>

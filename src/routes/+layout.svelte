@@ -58,4 +58,14 @@
 		max-height: 100px;
 		padding-bottom: 40px;
 	}
+
+	footer {
+		position: fixed;
+		left: 0;
+		bottom: 0;
+		display: flex;
+		width: 100%;
+		flex-direction: row;
+		justify-content: flex-end;
+	}
 </style>

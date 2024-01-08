@@ -1,5 +1,6 @@
 :root {
 	--background: rgb(0, 0, 0);
+	--drawer-background: rgb(71, 71, 71);
 	--primary: rgb(36, 127, 144);
 	--secondary: rgb(40, 40, 136);
 	--font-color: white;
