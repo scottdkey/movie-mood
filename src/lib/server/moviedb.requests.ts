@@ -1,10 +1,8 @@
-import { config } from 'dotenv';
-
-config();
+import { MOVIE_DB_TOKEN } from '$env/static/private'
 
 const movieDbApi = async <T>(url: string, method: 'GET', body?: any) => {
 	try {
-		const token = process.env.MOVIE_DB_TOKEN;
+		const token = MOVIE_DB_TOKEN;
 		const options: {
 			method: 'GET';
 			headers: {
