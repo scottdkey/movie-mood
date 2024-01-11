@@ -49,7 +49,7 @@
 
 	.wrapper {
 		position: absolute;
-		right: -60px;
+		right: -50px;
 		bottom: -30px;
 	}
 

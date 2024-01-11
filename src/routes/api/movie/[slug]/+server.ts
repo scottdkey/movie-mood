@@ -1,7 +1,8 @@
 import { json, type RequestHandler } from '@sveltejs/kit';
 import {
 	getMovieById,
-	getMovieWatchProvidersByMovieId
+	getMovieWatchProvidersByMovieId,
+	movieDbImagePath
 } from '../../../../lib/server/moviedb.requests';
 
 export const GET: RequestHandler = async ({ params }) => {
@@ -11,10 +12,13 @@ export const GET: RequestHandler = async ({ params }) => {
 	if (slug) {
 		movieId = slug;
 	}
-	const data = await getMovieById(movieId);
+	const movieInfo = await getMovieById(movieId);
 	const providerInfo = await getMovieWatchProvidersByMovieId(movieId);
+
+
+
 	return json({
-		movieInfo: data,
+		movieInfo,
 		providerInfo
 	});
 };

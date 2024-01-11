@@ -33,10 +33,11 @@
 
 <style>
 	.ack-button {
+		font-weight: 600;
 		z-index: 2;
 		padding: 10px;
 		position: absolute;
-		right: 80px;
+		right: 90px;
 		bottom: 13px;
 	}
 	.ack-body {
