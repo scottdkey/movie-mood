@@ -10,10 +10,9 @@
 	});
 </script>
 
-<!-- {#if $DesiredMood !== '' && $CurrentMood !== '' && $selectedMovie !== null} -->
-{#if $selectedMovie !== null}
+{#if $DesiredMood !== '' && $CurrentMood !== '' && $selectedMovie !== null}
+	<!-- {#if $selectedMovie !== null} -->
 	<div class="movie-selection">
-		you're {$CurrentMood} and want a movie to make you {$DesiredMood}
 		<h1>{$selectedMovie.movieInfo.original_title}</h1>
 		<h2>{$selectedMovie.movieInfo.overview}</h2>
 		<img alt="movie backdrop" src={$selectedMovie?.movieInfo.backdrop_path} />

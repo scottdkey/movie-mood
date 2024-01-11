@@ -28,6 +28,10 @@
 		</p> -->
 
 		<p>this site is currently a work in progress.</p>
+
+		<p>
+			Yes I know that every time the only thing it renders is Oppenheimer. Using that as a baseline to create the UI and then swapping that movie out  in a lookup table later.
+		</p>
 	</div>
 </Drawer>
 
