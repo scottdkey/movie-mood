@@ -55,11 +55,7 @@ interface SpokenLanguage {
 
 interface ProviderInfo {
     id:      number;
-    results: {[key: string]: {
-			buy: Provider[],
-			link: string
-			rent: Provider[]
-		}}[];
+    results: any;
 }
 
 interface Provider {
