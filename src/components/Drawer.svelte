@@ -25,9 +25,10 @@
 		margin: 0px;
 		height: fit-content;
 		width: fit-content;
-		-webkit-box-shadow: -1px -10px 13px -5px rgba(0, 0, 0, 0.75);
-		-moz-box-shadow: -1px -10px 13px -5px rgba(0, 0, 0, 0.75);
-		box-shadow: -1px -10px 13px -5px rgba(0, 0, 0, 0.75);
+		-webkit-box-shadow: -1px -10px 13px -5px var(--drawer-background);
+		-moz-box-shadow: -1px -10px 13px -5px var(--drawer-background);
+		box-shadow: -1px -1px 20px 6px var(--drawer-background);
+		opacity: 100%;
 	}
 	.controller {
 		visibility: hidden;
@@ -52,6 +53,7 @@
 		flex-direction: column;
 		height: 100%;
 		width: 100%;
+		opacity: 100%;
 	}
 
 	.close-button {

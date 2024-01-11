@@ -10,6 +10,13 @@
 		--primary-active: rgb(84, 174, 190);
 		--secondary-hover: rgb(49, 49, 255);
 		--secondary-active: rgba(78, 78, 254);
+
+		--lightest: rgba(238, 238, 238, 0.75);
+		--lighter: rgb(206, 206, 206, 0.75);
+		--light: rgb(126, 126, 126, 0.75);
+		--dark: rgb(94, 94, 94, 0.75);
+		--darker: rgb(49, 49, 49, 0.75);
+		--darkest: rgb(31, 31, 31, 0.75);
 	}
 }
 
@@ -25,5 +32,12 @@
 		--primary-active: rgb(69, 158, 173);
 		--secondary-hover: rgb(74, 74, 194);
 		--secondary-active: rgb(26, 26, 168);
+
+		--darkest: rgb(238, 238, 238);
+		--darker: rgb(206, 206, 206);
+		--dark: rgb(126, 126, 126);
+		--light: rgb(94, 94, 94);
+		--lighter: rgb(49, 49, 49);
+		--lightest: rgb(31, 31, 31);
 	}
 }

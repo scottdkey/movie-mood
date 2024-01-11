@@ -9,4 +9,11 @@
 	--primary-active: rgb(84, 174, 190);
 	--secondary-hover: rgb(49, 49, 255);
 	--secondary-active: rgba(78, 78, 254);
+
+	--lightest: rgb(238, 238, 238);
+	--lighter: rgb(206, 206, 206);
+	--light: rgb(126, 126, 126);
+	--dark: rgb(94, 94, 94);
+	--darker: rgb(49, 49, 49);
+	--darkest: rgb(31, 31, 31);
 }
