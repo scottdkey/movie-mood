@@ -3,8 +3,9 @@ import {
 	getMovieById,
 	getMovieWatchProvidersByMovieId,
 } from '../../../../lib/server/moviedb.requests';
+import { requestIp } from '../../../../hooks.server';
 
-export const GET: RequestHandler = async ({ params, getClientAddress }) => {
+export const GET: RequestHandler = async ({ params  }) => {
 	console.log(params);
 	const slug = params['slug'];
 	let movieId = '872585-oppenheimer';
@@ -13,7 +14,7 @@ export const GET: RequestHandler = async ({ params, getClientAddress }) => {
 	}
 	const movieInfo = await getMovieById(movieId);
 	const providerInfo = await getMovieWatchProvidersByMovieId(movieId);
-	console.log(getClientAddress())
+	console.log(requestIp, "requestIp")
 
 
 
