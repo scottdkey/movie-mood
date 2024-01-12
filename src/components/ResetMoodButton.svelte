@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { CurrentMood } from '../lib/stores/currentMood.store';
 	import { DesiredMood } from '../lib/stores/desiredMood.store';
+	import { movieInfo, providerInfo } from '../lib/stores/selectedMovie.store';
 </script>
 
 <button
@@ -9,6 +10,8 @@
 	on:click={() => {
 		DesiredMood.set('');
 		CurrentMood.set('');
+		movieInfo.set(null);
+		providerInfo.set(null);
 	}}
 >
 	reset

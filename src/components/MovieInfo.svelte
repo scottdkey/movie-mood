@@ -2,17 +2,21 @@
 	import { movieInfo } from '$lib/stores/selectedMovie.store';
 	import { CurrentMood } from '$lib/stores/currentMood.store';
 	import { DesiredMood } from '$lib/stores/desiredMood.store';
-	import { getMovieData } from '$lib/requests/getMovieData';
+	import { getMovieInfo } from '$lib/requests/getMovieInfo';
 	import { onDestroy } from 'svelte';
+
+	const fetchMovieData = () => {
+		getMovieInfo($CurrentMood, $DesiredMood);
+	};
 
 	const des = DesiredMood.subscribe((val) => {
 		if ($CurrentMood !== '' && val !== '') {
-			getMovieData('872585-oppenheimer');
+			fetchMovieData();
 		}
 	});
 	const cur = CurrentMood.subscribe((val) => {
 		if ($DesiredMood !== '' && val !== '') {
-			getMovieData('872585-oppenheimer');
+			fetchMovieData();
 		}
 	});
 	onDestroy(() => {

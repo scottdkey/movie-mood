@@ -1,66 +1,67 @@
- interface MovieDB {
-    movieInfo:    MovieInfo;
+interface MovieDB {
+    movieInfo: MovieInfo;
     providerInfo: ProviderInfo;
 }
 interface MovieInfo {
-    adult:                 boolean;
-    backdrop_path:         string;
+    adult: boolean;
+    backdrop_path: string;
     belongs_to_collection: null;
-    budget:                number;
-    genres:                Genre[];
-    homepage:              string;
-    id:                    number;
-    imdb_id:               string;
-    original_language:     string;
-    original_title:        string;
-    overview:              string;
-    popularity:            number;
-    poster_path:           string;
-    production_companies:  ProductionCompany[];
-    production_countries:  ProductionCountry[];
-    release_date:          Date;
-    revenue:               number;
-    runtime:               number;
-    spoken_languages:      SpokenLanguage[];
-    status:                string;
-    tagline:               string;
-    title:                 string;
-    video:                 boolean;
-    vote_average:          number;
-    vote_count:            number;
+    budget: number;
+    genres: Genre[];
+    homepage: string;
+    id: number;
+    imdb_id: string;
+    original_language: string;
+    original_title: string;
+    overview: string;
+    popularity: number;
+    poster_path: string;
+    production_companies: ProductionCompany[];
+    production_countries: ProductionCountry[];
+    release_date: Date;
+    revenue: number;
+    runtime: number;
+    spoken_languages: SpokenLanguage[];
+    status: string;
+    tagline: string;
+    title: string;
+    video: boolean;
+    vote_average: number;
+    vote_count: number;
 }
 
 interface Genre {
-    id:   number;
+    id: number;
     name: string;
 }
 
 interface ProductionCompany {
-    id:             number;
-    logo_path:      string;
-    name:           string;
+    id: number;
+    logo_path: string;
+    name: string;
     origin_country: string;
 }
 
 interface ProductionCountry {
     iso_3166_1: string;
-    name:       string;
+    name: string;
 }
 
 interface SpokenLanguage {
-    english_name: string;
-    iso_639_1:    string;
-    name:         string;
+    english_name: string
+    iso_639_1: string
+    name: string
 }
 
 interface ProviderInfo {
-    id:      number;
-    results: any;
+    link: string
+    buy: Provider[]
+    rent: Provider[]
 }
 
 interface Provider {
-				display_priority: 1000,
-				logo_path: string,
-				provider_id: 3,
-				provider_name: string
+    display_priority: number
+    logo_path: string
+    provider_id: number
+    provider_name: string
 }
