@@ -33,8 +33,8 @@
 		<img alt="movie poster" src={$movieInfo.poster_path} />
 		<div class="production-company-wrapper">
 			{#each $movieInfo.production_companies as company}
-				<h3 class="genre">{company.name}</h3>
-				<img alt="production company logo" src={company.logo_path} />
+				<!-- <h3 class="genre">{company.name}</h3> -->
+				<img class="production-company" alt="production company logo" src={company.logo_path} />
 			{/each}
 		</div>
 		<div class="genre-wrapper">
@@ -62,5 +62,20 @@
 	}
 	.genre {
 		margin: 2px;
+	}
+	.production-company {
+		max-height: 200px;
+		max-width: 200px;
+		object-fit: scale-down;
+		margin: 5px;
+		vertical-align: center;
+		background-color: var(--light);
+		padding: 10px;
+		border-radius: 5px;
+	}
+	.production-company-wrapper {
+		display: flex;
+		flex-direction: row;
+		align-items: flex-end;
 	}
 </style>

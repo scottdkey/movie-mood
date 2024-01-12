@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { providerInfo, movieInfo } from '$lib/stores/selectedMovie.store';
-	import { onDestroy, onMount } from 'svelte';
+	import { onDestroy } from 'svelte';
 	import { getProviderInfo } from '../lib/requests/getProviderInfo';
 
 	const unsubscribe = movieInfo.subscribe(async (movie) => {
@@ -15,8 +15,6 @@
 </script>
 
 {#if $providerInfo !== null}
-	<div>provider info</div>
-	<pre>{JSON.stringify($providerInfo)}</pre>
 	<a href={$providerInfo.link}>MovieDb Link</a>
 	<h2>Rent</h2>
 	<div class="rent-wrapper">
