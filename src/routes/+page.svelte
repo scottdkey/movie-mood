@@ -1,10 +1,11 @@
 <script lang="ts">
-	import MovieSelection from '../components/MovieSelection.svelte';
+	import MovieInfo from '../components/MovieInfo.svelte';
+	import ProviderInfo from '../components/ProviderInfo.svelte';
 	import ResetMoodButton from '../components/ResetMoodButton.svelte';
 	import Select from '../components/Select.svelte';
-	import { moods } from '../staticData/selections';
 	import { CurrentMood } from '../lib/stores/currentMood.store';
 	import { DesiredMood } from '../lib/stores/desiredMood.store';
+	import { moods } from '../staticData/selections';
 </script>
 
 <body class="primary">
@@ -26,7 +27,8 @@
 	</div>
 
 	<ResetMoodButton />
-	<MovieSelection />
+	<MovieInfo />
+	<ProviderInfo />
 </body>
 
 <style>
@@ -52,5 +54,4 @@
 			flex-direction: column;
 		}
 	}
-
 </style>
