@@ -5,7 +5,7 @@
 </script>
 
 <button
-	class="reset-mood"
+	class={`reset-mood ${$DesiredMood === '' || $CurrentMood === '' ? 'hidden' : ''}`}
 	disabled={$DesiredMood === '' || $CurrentMood === ''}
 	on:click={() => {
 		DesiredMood.set('');
@@ -37,5 +37,6 @@
 	}
 	.reset-mood:disabled {
 		background: var(--secondary-disabled);
+		display: none;
 	}
 </style>
