@@ -6,7 +6,7 @@
 	export let name: string;
 </script>
 
-<select {name} class="custom-select" bind:value>
+<select {name} class="custom-select" bind:value disabled={value !== ''}>
 	<option value="" selected disabled hidden>{placeholder}</option>
 	{#each selections as s}
 		{#if s !== checkAgainstValue}
@@ -43,6 +43,9 @@
 		margin-left: 20px;
 		border-radius: 20px;
 		margin-top: 20px;
+	}
+	.custom-select:disabled {
+		background-color: var(--light);
 	}
 
 	.custom-select:hover :active {
