@@ -28,7 +28,6 @@
 
 	<ResetMoodButton />
 	<MovieInfo />
-	<ProviderInfo />
 </body>
 
 <style>

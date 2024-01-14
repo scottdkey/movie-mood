@@ -5,8 +5,8 @@
 	import { getMovieInfo } from '$lib/requests/getMovieInfo';
 	import { onDestroy } from 'svelte';
 	import ProductionCompany from './ProductionCompany.svelte';
-	import Genre from './Genres.svelte';
 	import TitleAndSynopsis from './TitleAndSynopsis.svelte';
+	import ProviderInfo from './ProviderInfo.svelte';
 
 	const fetchMovieData = () => {
 		getMovieInfo($CurrentMood, $DesiredMood);
@@ -35,6 +35,7 @@
 			<TitleAndSynopsis />
 		</div>
 		<ProductionCompany />
+		<ProviderInfo />
 	</div>
 {/if}
 
@@ -48,22 +49,24 @@
 		overflow: visible;
 		height: fit-content;
 		background-color: var(--lightest);
-		& .header {
-			display: flex;
-			flex-direction: row;
-			margin-left: 1em;
-			margin-right: 1em;
-			padding-top: 2em;
+		padding-bottom: 60px;
+	}
 
-			& .movie-poster {
-				display: block;
-				border-radius: 5px;
-				max-width: 200px;
-				max-height: 250px;
-				width: auto;
-				height: auto;
-				box-shadow: 3px 3px 3px var(--lighter);
-			}
-		}
+	.movie-poster {
+		display: block;
+		border-radius: 5px;
+		max-width: 200px;
+		max-height: 250px;
+		width: auto;
+		height: auto;
+		box-shadow: 3px 3px 3px var(--lighter);
+	}
+
+	.header {
+		display: flex;
+		flex-direction: row;
+		margin-left: 1em;
+		margin-right: 1em;
+		padding-top: 2em;
 	}
 </style>
