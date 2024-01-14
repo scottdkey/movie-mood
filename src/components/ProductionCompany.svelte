@@ -1,11 +1,21 @@
 <script lang="ts">
-	export let logoPath: string;
-	export let name: string;
+	import { movieInfo } from '../lib/stores/selectedMovie.store';
 </script>
 
-<img class="production-company" alt={`${name} logo`} src={logoPath} />
+{#if $movieInfo !== null}
+	<div class="production-company-wrapper">
+		{#each $movieInfo.production_companies as company}
+			<img class="production-company" alt={`${company.name} logo`} src={company.logo_path} />
+		{/each}
+	</div>
+{/if}
 
 <style>
+	.production-company-wrapper {
+		display: flex;
+		flex-direction: row;
+		align-items: flex-end;
+	}
 	.production-company {
 		max-height: 200px;
 		max-width: 200px;
