@@ -4,6 +4,8 @@
 	import { DesiredMood } from '$lib/stores/desiredMood.store';
 	import { getMovieInfo } from '$lib/requests/getMovieInfo';
 	import { onDestroy } from 'svelte';
+	import ProductionCompany from './ProductionCompany.svelte';
+	import Genre from './Genre.svelte';
 
 	const fetchMovieData = () => {
 		getMovieInfo($CurrentMood, $DesiredMood);
@@ -27,22 +29,26 @@
 
 {#if $DesiredMood !== '' && $CurrentMood !== '' && $movieInfo !== null}
 	<div class="movie-selection">
-		<h1>{$movieInfo.original_title}</h1>
-		<h2>{$movieInfo.overview}</h2>
-		<img alt="movie backdrop" src={$movieInfo.backdrop_path} />
-		<img alt="movie poster" src={$movieInfo.poster_path} />
+		<div class="header">
+			<img class="movie-poster" alt="movie poster" src={$movieInfo.poster_path} />
+			<div class="title-and-synopsis">
+				<h1>{$movieInfo.original_title}</h1>
+				<h4>{$movieInfo.overview}</h4>
+				<h3 class="runtime">Runtime: {$movieInfo.runtime} minutes</h3>
+			</div>
+		</div>
+
 		<div class="production-company-wrapper">
 			{#each $movieInfo.production_companies as company}
-				<!-- <h3 class="genre">{company.name}</h3> -->
-				<img class="production-company" alt="production company logo" src={company.logo_path} />
+				<ProductionCompany logoPath={company.logo_path} name={company.name} />
 			{/each}
 		</div>
+
 		<div class="genre-wrapper">
 			{#each $movieInfo.genres as genre}
-				<h3 class="genre">{genre.name}</h3>
+				<Genre genre={genre.name} />
 			{/each}
 		</div>
-		<h3 class="runtime">Runtime: {$movieInfo.runtime} minutes</h3>
 	</div>
 {/if}
 
@@ -55,24 +61,43 @@
 		font-size: 20px;
 		overflow: visible;
 		height: fit-content;
+		background-color: var(--lightest);
+		& .header {
+			display: flex;
+			flex-direction: row;
+			margin-left: 1em;
+			margin-right: 1em;
+			padding-top: 2em;
+
+			& .title-and-synopsis {
+				text-align: left;
+				margin-left: 1em;
+				margin-bottom: 10px;
+				margin-top: 0px;
+				padding-top: 0px;
+				vertical-align: top;
+				height: 100%;
+				& h4 {
+					font-weight: 300;
+				}
+			}
+
+			& .movie-poster {
+				border-radius: 5px;
+				max-width: 200px;
+				box-shadow: 3px 3px 3px var(--lighter);
+			}
+		}
 	}
+
 	.genre-wrapper {
 		display: flex;
 		margin: 2px;
+		& .genre {
+			margin: 2px;
+		}
 	}
-	.genre {
-		margin: 2px;
-	}
-	.production-company {
-		max-height: 200px;
-		max-width: 200px;
-		object-fit: scale-down;
-		margin: 5px;
-		vertical-align: center;
-		background-color: var(--light);
-		padding: 10px;
-		border-radius: 5px;
-	}
+
 	.production-company-wrapper {
 		display: flex;
 		flex-direction: row;
